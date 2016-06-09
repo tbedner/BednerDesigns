@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName " Statistics"
+/web/httpd2/conf/1572/virtualhosts.conf- AuthName "bednerdesigns.com Statistics"
+AuthUserFile /var/chroot/home/content/87/10932287/html/stats/.statspwd
+Require valid-user
+DirectoryIndex index.html

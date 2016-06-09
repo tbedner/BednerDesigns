@@ -1,0 +1,781 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Extended base styles (site specific)
+*****************************************************************/
+
+html { 
+	overflow-y: scroll; /* always force a scrollbar in non-IE */
+	}
+body {
+	background: #FFF;
+	overflow-x: hidden;
+	height: 7000px;
+	line-height: 1.5;
+	color: #000;
+	font-size: 16px;
+	font-family: 'Merriweather Sans';
+}
+h1 {
+	color: #00ccff;
+	width: 100%;
+}
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color:#4ed4f5;
+	outline: none;
+	text-decoration:none;
+	background-color: #1298ff;
+	}
+	a:hover { 
+		color:#000;
+		}
+img { 
+	display:block;
+	}
+p {
+	margin:1em 0;
+	}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+/* Common shared styles
+*****************************************************************/
+
+/*hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid #3b3b3b;
+	border-bottom: 1px solid #3b3b3b;
+	height: 3px;
+}
+*/
+/* Page structure
+*****************************************************************/
+
+#wrapper {
+	position: relative;
+}
+#branding {
+	width: 100%;
+	background: #fff;
+	}
+	#branding h1 {
+		width: 940px;
+		padding: 10px 15px;
+		margin: 0 auto;
+			text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		}
+
+/* Nav
+*****************************************************************/
+
+nav#primary {
+	z-index: 5;
+	position: fixed;
+	top: 50%;
+	left: 16px;
+	margin-top: -40px;
+}
+nav#primary li {
+	position: relative;
+	height: 20px;
+}
+nav#primary a {
+	display: block;
+	width: 130px;
+	height: 20px;
+	text-indent: 20px;
+	background:none;
+}
+nav#primary a:hover {
+	background-color:white;
+}
+nav#primary a:active {
+	background-color:white;
+	color: blue;
+}
+
+nav#primary h1 {
+	position: absolute;
+	right: 22px;
+	top: -7px;
+	display: none;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+	background: transparent url('../img/nav-arrow.png') 100% 50% no-repeat;
+	}
+
+/* Parallax
+*****************************************************************/
+
+/* content */
+#content {
+	z-index: 4;
+	position: relative;
+	max-width: 100%;
+	padding: 0 0px;
+	margin: 0 auto;
+	line-height: 1.7;
+	}
+
+	#content article {
+		width: 100%;
+		text-align: center;
+		background: white;
+		
+		}
+		#home,
+		#whatwedo,
+		#about,
+		#service {
+			padding-top: 105px;
+			}
+		#home {
+			position: absolute;
+			top: 0px;
+			z-index: 0;
+			}
+		#whatwedo {
+			position: absolute;
+			top: 1090px;
+			}
+		#about {
+			position: absolute;
+			top: 2180px;
+			z-index: 0;
+			}
+/*		#service {
+			position: absolute;
+			top: 3270px;
+			} */
+		#portfolio {
+			position: absolute;
+			top: 3270px;
+			}
+		#contact {
+			position: absolute;
+			top: 4360px;
+			} 
+			#content h1 {
+				margin: 0 0 25px 0;
+				font-size: 60px;
+				font-weight: normal;
+				line-height: 65px;
+				font-family: 'Special Elite', serif;
+				text-shadow: 0px 2px 6px black;
+				}
+			#whatwedo h1 {
+				margin-top: -75px;
+				margin-bottom: 0px;	
+			}
+			.wait img {
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: -75px;
+				float: left;
+			}
+			.wait {
+				color:deepskyblue;
+				text-align: center;
+				font-size: large;
+			}
+			#bio {
+				color: black;
+				text-align: left;
+				font-size: large;
+				width: 600px;
+				float: left;
+				margin-left: 20px	
+			}
+			#bioimg {
+				float: left;
+				margin-left: 200px;
+			}
+			#under{
+				color:white;
+				text-align: center;
+				font-size: large;
+				font-family: 'Merriweather Sans', serif;
+				font-size: 30px;
+				text-shadow: 0px 2px 6px #aaa;
+				
+			}
+			.quote {
+				width:700px;
+				margin: auto;
+			}
+/*----------------------------
+  Video Background for Home
+-----------------------------*/
+
+#video_background { 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	min-width: 100%; 
+	min-height: 100%; 
+	width: auto; 
+	height: auto; 
+	z-index: -1000; 
+	overflow: hidden; 
+	}
+/*#video_pattern {
+	background-image: url(img/greenscreen.png);
+	position: fixed;
+	opacity: 0.8;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}*/
+.list {
+	text-align: left;
+	margin-left: 300px;
+	color:black;
+}
+#map_canvas{
+    width: 100%;
+    height: 800px;
+
+}
+#contactform {
+	text-align: left;
+	margin-left: 200px;
+}
+#contactform form {
+	line-height: 20px;
+}
+#contactinfo {
+	float: right;
+	margin-right: 100px;
+	margin-left: 0px;
+	color: #9d9898
+}
+#contactinfo a, a:link, a:active, a:visited, a:hover {
+	color:#4ed4f5;
+	outline: none;
+	text-decoration:none;
+	background-color: white;
+}
+#mysubmit {
+ 	color: white;
+ 	background-color: #00bbff;
+ 	margin-left: 500px;
+ 	width: 150px;
+}
+#mysubmit:hover {
+	color: red;
+}
+#message {
+	color: red;
+}
+
+/*----------------------------
+  Menu for What We Do
+-----------------------------*/
+
+#filter {
+	display: block;
+	height: 39px;
+	margin: 0px auto;
+	position: relative;
+	width: 100%;
+	text-align:center;
+	background-color: black;
+}
+#filter:before {
+	background-position: 0 -47px;
+	left: -78px;
+}
+#filter:after {
+	background-position: 0 0;
+	right: -78px;
+}
+#filter a{
+	background: url("../img/bar.png") repeat-x 0 -94px;	
+	color: #FFFFFF;
+	display: inline-block;
+	height: 39px;
+	line-height: 37px;
+	padding: 0 75px;
+	text-shadow:1px 1px 1px #315218;
+}
+#filter a:hover{
+	text-decoration:none;
+}
+#filter a.active{
+	background: url("../img/bar.png") repeat-x 0 -138px;
+	box-shadow:	1px 0 0 rgba(255, 255, 255, 0.2),
+				-1px 0 0 rgba(255, 255, 255, 0.2),
+				1px 0 1px rgba(0,0,0,0.2) inset,
+				-1px 0 1px rgba(0,0,0,0.2) inset;
+}
+
+/*----------------------------
+  Content area for What We Do
+-----------------------------*/
+
+#container{
+	display:block;
+	overflow:hidden;
+	width: 100%;
+	margin:10px auto 0px auto;
+}
+#container li{	
+	height: 510px;
+	list-style: none outside none;
+	margin: auto;
+	position: relative;
+	width: 900px;
+	text-align: center;
+	margin-left: 350px;
+}
+#container ul{
+	overflow:hidden;
+}
+
+#container ul.hidden{
+	display:none;
+}
+.portfolioholder {
+	width: 100%;
+	text-align: center;	
+	margin: -50px auto 0 300px;
+	padding: 10px;
+	clear:both;	
+}
+.portfolioleft {
+	float: left;
+	text-align: center;	
+	padding: 10px;	
+	
+}
+.portfolioright {
+	float: left;
+	text-align: center;	
+	padding: 10px 10px 10px 0px;	
+	
+}
+.photo {
+	float: left;
+	margin: 20px 20px 0px -100px
+}
+/*----------------------------
+  Menu for What We Do - Web Design
+-----------------------------*/
+.caption {
+	float: left;
+	margin: 50px 0px 0px 0px;
+	text-align: left;
+}
+#caption1 {
+	width: 600px;
+}
+#caption2 {
+	width: 600px;
+	margin: -80px 0 0 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	overflow: hidden;
+	width: 600px;
+		
+}
+#caption3 {
+	width: 600px;
+	margin: -120px 0 0 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	overflow: hidden;
+	width: 600px;
+		
+}
+#subcaption1 {
+	color: #a9a9a9;
+	font-size: 75%;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+	visibility: hidden;
+	margin: 0px 0 0 20px;
+	z-index: -10;
+	overflow: hidden;
+	width: 500px%;	
+}
+#subcaption2 {
+	color: #a9a9a9;
+	font-size: 75%;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+	visibility: hidden;
+	margin: 0px 0 0 20px;
+	z-index: -10;
+	overflow: hidden;
+	width: 500px%;	
+}
+#subcaption3 {
+	color: #a9a9a9;
+	font-size: 75%;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+	visibility: hidden;
+	margin: 0px 0 0 20px;
+	z-index: -10;
+	overflow: hidden;
+	width: 500px%;	
+}
+#caption1:hover {
+	color: deepskyblue;
+}
+#caption2:hover {
+	color: deepskyblue;
+}
+#caption3:hover {
+	color: deepskyblue;
+}
+#caption1:hover > #subcaption1 {
+	color: grey;
+	visibility: visible;
+	opacity: 1;
+	-webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+#caption2:hover > #subcaption2 {
+	color: grey;
+	visibility: visible;
+	opacity: 1;
+	-webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+#caption3:hover > #subcaption3 {
+	color: grey;
+	visibility: visible;
+	opacity: 1;
+	-webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+#caption1:hover + #caption2 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: 5px 0 0 0;
+
+}
+.caption:hover > #caption2:hover {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: -80px 0 0 0;	
+	}
+.caption:hover > #caption3 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: -120px 0 0 0;
+
+}
+#caption2:hover + #caption3 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: 5px 0 0 0;
+
+}
+#caption2:hover + #caption3 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: 5px 0 0 0;
+
+}
+.caption:hover > #caption3:hover {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: -120px 0 0 0;	
+	}
+
+/*----------------------------
+  Menu for What We Do - Web Development
+-----------------------------*/
+.caption {
+	float: left;
+	margin: 50px 0px 0px 0px;
+	text-align: left;
+}
+#caption4 {
+	width: 600px;
+}
+#caption5 {
+	width: 600px;
+	margin: -200px 0 0 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	overflow: hidden;
+	width: 600px;
+		
+}
+#caption6 {
+	width: 600px;
+	margin: -180px 0 0 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	overflow: hidden;
+	width: 600px;
+		
+}
+#subcaption4 {
+	color: #a9a9a9;
+	font-size: 75%;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+	visibility: hidden;
+	margin: 0px 0 0 20px;
+	z-index: -10;
+	overflow: hidden;
+	width: 500px%;	
+}
+#subcaption5 {
+	color: #a9a9a9;
+	font-size: 75%;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+	visibility: hidden;
+	margin: 0px 0 0 20px;
+	z-index: -10;
+	overflow: hidden;
+	width: 500px%;	
+}
+#subcaption6 {
+	color: #a9a9a9;
+	font-size: 75%;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+	visibility: hidden;
+	margin: 0px 0 0 20px;
+	z-index: -10;
+	overflow: hidden;
+	width: 500px%;	
+}
+#caption14:hover {
+	color: deepskyblue;
+}
+#caption5:hover {
+	color: deepskyblue;
+}
+#caption6:hover {
+	color: deepskyblue;
+}
+#caption4:hover > #subcaption4 {
+	color: grey;
+	visibility: visible;
+	opacity: 1;
+	-webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+#caption5:hover > #subcaption5 {
+	color: grey;
+	visibility: visible;
+	opacity: 1;
+	-webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+#caption6:hover > #subcaption6 {
+	color: grey;
+	visibility: visible;
+	opacity: 1;
+	-webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+#caption4:hover + #caption5 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: 5px 0 0 0;
+
+}
+.caption:hover > #caption5:hover {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: -200px 0 0 0;	
+	}
+.caption:hover > #caption6 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: -180px 0 0 0;
+
+}
+#caption5:hover + #caption6 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: 5px 0 0 0;
+
+}
+#caption5:hover + #caption6 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: 5px 0 0 0;
+
+}
+.caption:hover > #caption6:hover {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin: -180px 0 0 0;	
+	}
+	
+#simplegallery1 { 
+	position: relative; /*keep this intact*/
+	visibility: hidden; /*keep this intact*/
+	margin: 0 auto;	
+	}
+#simplegallery1 .gallerydesctext { 
+	text-align: center;
+	padding: 2px 5px;
+	}
+#simplegallery1 .navpanellayer img {
+	display:inline; 
+}
+#navigatep a {
+	display:inline; 
+	color: #a8a8a8;	
+	text-align: left;
+}
+#navigatep img{
+	display:inline; 
+	color: deepskyblue;	
+	text-align: left;
+}
+#portfoliodescription {
+	color:deepskyblue;
+	-webkit-transition: all 0s ease-in;
+	-moz-transition: all 0s ease-in;
+	-o-transition: all 0s ease-in;
+	transition: all 0s ease-in;
+	
+}

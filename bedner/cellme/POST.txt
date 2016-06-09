@@ -1,0 +1,462 @@
+C:\xampp\htdocs\project\add_book2.php
+      4: $type=trim($_POST['type']);
+      6: $letter=trim($_POST['letter']);
+C:\xampp\htdocs\project\add_new.php
+      8: $fname=trim($_POST['fname']);
+     11: $lname=trim($_POST['lname']);
+     14: $cell=trim($_POST['cell']);
+     16: $city=trim($_POST['city']);
+     19: $usermode=trim($_POST['usermode']);
+     29: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\addcomment.php
+      6: $userid = $_POST['userid'];
+      7: $timeid = $_POST['timeid'];
+     13: $fname=trim($_POST['fname']);
+     16: $lname=trim($_POST['lname']);
+     19: $comment = trim($_POST['comment']);
+     23: if (empty($_POST['comment'])) {
+C:\xampp\htdocs\project\addscore.php
+     20: if (isset($_POST['submit'])) {
+     25: $name = mysqli_real_escape_string($dbc, trim($_POST['name']));
+     26: $score = mysqli_real_escape_string($dbc, trim($_POST['score']));
+     32: $user_pass_phrase = SHA($_POST['verify']);
+C:\xampp\htdocs\project\addupdate.php
+      8: $update=trim($_POST['update']);
+     14: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\adv_feedback.php
+      5: $name = trim($_POST['name']);
+      6: $email = trim($_POST['email']);
+      7: $feedback = trim($_POST['feedback']);
+C:\xampp\htdocs\project\bregister_new.php
+      6: $fname=trim($_POST['fname']);
+     10: $lname=trim($_POST['lname']);
+     14: $cell=trim($_POST['cell']);
+     15: $city=trim($_POST['city']);
+     19: $email=trim($_POST['email']);
+     20: $username=trim($_POST['username']);
+     23: $passwd=trim($_POST['passwd']);
+     24: $passwd2=trim($_POST['passwd2']);
+     27: $displaymode=trim($_POST['display']);
+     30: $user_pass_phrase = SHA1($_POST['verify']);
+     38: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\change_city.php
+      8: $new_city = trim($_POST['new_city']);
+     15: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\change_display.php
+      8: $new_displaymode = trim($_POST['new_displaymode']);
+     14: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\change_email.php
+      7: $new_email = trim($_POST['new_email']);
+     13: if (!filled_out($_POST) || !valid_email($new_email)) {
+C:\xampp\htdocs\project\change_name.php
+      8: $new_fname = trim($_POST['new_fname']);
+     12: $new_lname = trim($_POST['new_lname']);
+     19: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\change_number.php
+      7: $new_cell = trim($_POST['new_cell']);
+     13: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\change_passwd.php
+      8: $old_passwd = trim($_POST['old_passwd']);
+     11: $new_passwd = trim($_POST['new_passwd']);
+     14: $new_passwd2 = trim($_POST['new_passwd2']);
+     20: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\change_photo.php
+      9: if (isset($_POST['submit'])) {
+C:\xampp\htdocs\project\db_fns2.php
+      5: foreach ($_POST as $key => $value) {
+      6: $_POST[$key] = mysql_real_escape_string($value);
+C:\xampp\htdocs\project\example.php
+     29: if (isset($_POST['provider_box']))
+     31: if (isset($oi_services['email'][$_POST['provider_box']])) $plugType='email';
+     32: elseif (isset($oi_services['social'][$_POST['provider_box']])) $plugType='social';
+     60: if (!empty($_POST['step'])) $step=$_POST['step'];
+     68: if (empty($_POST['email_box']))
+     70: if (empty($_POST['password_box']))
+     72: if (empty($_POST['provider_box']))
+     76: $inviter->startPlugin($_POST['provider_box']);
+     80: elseif (!$inviter->login($_POST['email_box'],$_POST['password_box']))
+     91: $_POST['oi_session_id']=$inviter->plugin->getSessionID();
+     92: $_POST['message_box']='';
+     98: if (empty($_POST['provider_box'])) $ers['provider']='Provider missing';
+    101: $inviter->startPlugin($_POST['provider_box']);
+    106: if (empty($_POST['email_box'])) $ers['inviter']='Inviter information missing';
+    107: if (empty($_POST['oi_session_id'])) $ers['session_id']='No active session';
+    108: if (empty($_POST['message_box'])) $ers['message_body']='Message missing';
+    109: else $_POST['message_box']=strip_tags($_POST['message_box']);
+    111: $message=array('subject'=>$inviter->settings['message_subject'],'body'=>$inviter->settings['message_body'],'attachment'=>"\n\rAttached message: \n\r".$_POST['message_box']);
+    114: foreach ($_POST as $key=>$val)
+    116: $selected_contacts[$_POST['email_'.$val]]=$_POST['name_'.$val];
+    120: if (is_numeric($temp[1])) $contacts[$val]=$_POST['name_'.$temp[1]];
+    128: $sendMessage=$inviter->sendMessage($_POST['oi_session_id'],$message,$selected_contacts);
+    133: $message_subject=$_POST['email_box'].$message['subject'];
+    135: $headers="From: {$_POST['email_box']}";
+    152: $_POST['email_box']='';
+    153: $_POST['password_box']='';
+    154: $_POST['provider_box']='';
+    174: <tr class='thTableRow'><td align='right'><label for='email_box'>Email</label></td><td><input class='thTextbox' type='text' name='email_box' value='{$_POST['email_box']}'></td></tr>
+    175: <tr class='thTableRow'><td align='right'><label for='password_box'>Password</label></td><td><input class='thTextbox' type='password' name='password_box' value='{$_POST['password_box']}'></td></tr>
+    181: $contents.="<option value='{$provider}'".($_POST['provider_box']==$provider?' selected':'').">{$details['name']}</option>";
+    189: <tr class='thTableRow'><td align='right' valign='top'><label for='message_box'>Message</label></td><td><textarea rows='5' cols='50' name='message_box' class='thTextArea' style='width:300px;'>{$_POST['message_box']}</textarea></td></tr>
+    219: <input type='hidden' name='provider_box' value='{$_POST['provider_box']}'>
+    220: <input type='hidden' name='email_box' value='{$_POST['email_box']}'>
+    221: <input type='hidden' name='oi_session_id' value='{$_POST['oi_session_id']}'>";
+C:\xampp\htdocs\project\forgot_passwd.php
+      7: $username = $_POST['username'];
+C:\xampp\htdocs\project\getaddcontacts.php
+     26: fname LIKE '%".$_POST['string']."%'
+     28: lname LIKE '%".$_POST['string']."%'
+     38: $label = destacaTexto($_POST['string'],$texto);
+C:\xampp\htdocs\project\id\addcomment.php
+      6: $userid = $_POST['userid'];
+      7: $timeid = $_POST['timeid'];
+     10: $fname = $_POST['fname'];
+     11: $lname = $_POST['lname'];
+     12: $comment = $_POST['comment'];
+     13: if (empty($_POST['comment'])) {
+C:\xampp\htdocs\project\id\idadd_book.php
+      5: $type=trim($_POST['type']);
+      6: $letter=trim($_POST['letter']);
+C:\xampp\htdocs\project\id\idadd_new.php
+      5: $fname=trim($_POST['fname']);
+      6: $lname=trim($_POST['lname']);
+      7: $cell=trim($_POST['cell']);
+      8: $city=trim($_POST['city']);
+      9: $usermode=trim($_POST['usermode']);
+     53: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\id\idaddcomment.php
+      6: $userid = $_POST['userid'];
+      7: $timeid = $_POST['timeid'];
+     10: $fname = $_POST['fname'];
+     11: $lname = $_POST['lname'];
+     12: $comment = $_POST['comment'];
+     13: if (empty($_POST['comment'])) {
+C:\xampp\htdocs\project\id\idaddmyupdate.php
+      5: $update=trim($_POST['update']);
+C:\xampp\htdocs\project\id\ideditchange_cell2.php
+      6: $new_cell = trim($_POST['new_cell']);
+     10: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\id\ideditchange_city2.php
+      6: $new_city = trim($_POST['new_city']);
+     11: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\id\ideditchange_display2.php
+      5: $new_displaymode = trim($_POST['new_displaymode']);
+C:\xampp\htdocs\project\id\ideditchange_email2.php
+      6: $email = trim($_POST['new_email']);
+      8: if (!filled_out($_POST) || !valid_email($email)) {
+C:\xampp\htdocs\project\id\ideditchange_name2.php
+      6: $old_fname = trim($_POST['old_fname']);
+      9: $new_fname = trim($_POST['new_fname']);
+     13: $old_lname = trim($_POST['old_lname']);
+     16: $new_lname = trim($_POST['new_lname']);
+     21: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\id\ideditchange_password2.php
+      5: $old_passwd = trim($_POST['old_passwd']);
+      8: $new_passwd = trim($_POST['new_passwd']);
+     11: $new_passwd2 = trim($_POST['new_passwd2']);
+     15: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\id\ideditchange_photo2.php
+      9: if (isset($_POST['submit'])) {
+C:\xampp\htdocs\project\id\idforgot_passwd.php
+     46: $username = $_POST['username'];
+C:\xampp\htdocs\project\id\idfriend.php
+     48: if (isset($_POST['provider_box']))
+     50: if (isset($oi_services['email'][$_POST['provider_box']])) $plugType='email';
+     51: elseif (isset($oi_services['social'][$_POST['provider_box']])) $plugType='social';
+     79: if (!empty($_POST['step'])) $step=$_POST['step'];
+     87: if (empty($_POST['email_box']))
+     89: if (empty($_POST['password_box']))
+     91: if (empty($_POST['provider_box']))
+     95: $inviter->startPlugin($_POST['provider_box']);
+     99: elseif (!$inviter->login($_POST['email_box'],$_POST['password_box']))
+    110: $_POST['oi_session_id']=$inviter->plugin->getSessionID();
+    111: $_POST['message_box']='';
+    117: if (empty($_POST['provider_box'])) $ers['provider']='Provider missing';
+    120: $inviter->startPlugin($_POST['provider_box']);
+    125: if (empty($_POST['email_box'])) $ers['inviter']='Inviter information missing';
+    126: if (empty($_POST['oi_session_id'])) $ers['session_id']='No active session';
+    127: if (empty($_POST['message_box'])) $ers['message_body']='Message missing';
+    128: else $_POST['message_box']=strip_tags($_POST['message_box']);
+    130: $message=array('subject'=>$inviter->settings['message_subject'],'body'=>$inviter->settings['message_body'],'attachment'=>"\n\rAttached message: \n\r".$_POST['message_box']);
+    133: foreach ($_POST as $key=>$val)
+    135: $selected_contacts[$_POST['email_'.$val]]=$_POST['name_'.$val];
+    139: if (is_numeric($temp[1])) $contacts[$val]=$_POST['name_'.$temp[1]];
+    147: $sendMessage=$inviter->sendMessage($_POST['oi_session_id'],$message,$selected_contacts);
+    152: $message_subject=$_POST['email_box'].$message['subject'];
+    154: $headers="From: {$_POST['email_box']}";
+    171: $_POST['email_box']='';
+    172: $_POST['password_box']='';
+    173: $_POST['provider_box']='';
+    192: $contents.="Email<li class='form'><input placeholder='Email' class='thTextbox' type='text' name='email_box' value='{$_POST['email_box']}' /></li>
+    193: Password<li class='form'><input placeholder='Password' class='thTextbox' type='password' name='password_box' value='{$_POST['password_box']}' /></li>
+    201: <tr class='thTableRow'><td align='right' valign='top'><label for='message_box'>Message</label></td><td><textarea rows='5' cols='50' name='message_box' class='thTextArea' style='width:300px;'>{$_POST['message_box']}</textarea></td></tr>
+    230: <input type='hidden' name='provider_box' value='{$_POST['provider_box']}'>
+    231: <input type='hidden' name='email_box' value='{$_POST['email_box']}'>
+    232: <input type='hidden' name='oi_session_id' value='{$_POST['oi_session_id']}'>";
+C:\xampp\htdocs\project\id\idinvite_form.php
+      5: $name = trim($_POST['to']);
+      6: $email = trim($_POST['email']);
+      7: $feedback = trim($_POST['feedback']);
+C:\xampp\htdocs\project\id\idmailnew2.php
+      5: $to = $_POST['to'];
+      6: $to2 = $_POST['to2'];
+      8: $sub = addslashes($_POST['subject']);
+      9: $msg = addslashes($_POST['mail']);
+     11: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\id\idmailreply2.php
+      5: $to = $_POST['to'];
+      7: $sub = addslashes($_POST['subject']);
+      8: $msg = addslashes($_POST['mail']);
+C:\xampp\htdocs\project\id\idmember.php
+      7: $username = $_POST['username'];
+      8: $password = $_POST['password'];
+C:\xampp\htdocs\project\id\idmyaddcomment.php
+      6: $userid = $_POST['userid'];
+      7: $timeid = $_POST['timeid'];
+     10: $fname = $_POST['fname'];
+     11: $lname = $_POST['lname'];
+     12: $comment = $_POST['comment'];
+     14: if (empty($_POST['comment'])) {
+C:\xampp\htdocs\project\id\idother_feedback.php
+      5: $user_pass_phrase = SHA1($_POST['verify']);
+      7: $name = trim($_POST['name']);
+      8: $email = trim($_POST['email']);
+      9: $feedback = trim($_POST['feedback']);
+C:\xampp\htdocs\project\id\idregister_new.php
+      6: $fname=trim($_POST['fname']);
+      8: $lname=trim($_POST['lname']);
+     10: $cell=trim($_POST['cell']);
+     11: $city=trim($_POST['city']);
+     13: $email=trim($_POST['email']);
+     14: $username=trim($_POST['username']);
+     15: $passwd=trim($_POST['passwd']);
+     16: $passwd2=trim($_POST['passwd2']);
+     17: $usermode=trim($_POST['usermode']);
+     18: $displaymode=trim($_POST['display']);
+     20: $user_pass_phrase = SHA1($_POST['verify']);
+     27: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\id\idsearch_results.php
+     12: $search_fname = sql_sanitize($_POST['fname']);
+     13: $search_lname = sql_sanitize($_POST['lname']);
+     14: $search_city = sql_sanitize($_POST['city']);
+     15: $list_type = trim($_POST['list_type']);
+C:\xampp\htdocs\project\id\iduser_feedback.php
+      5: $user_pass_phrase = SHA1($_POST['verify']);
+      7: $name = trim($_POST['name']);
+      8: $email = trim($_POST['email']);
+      9: $feedback = trim($_POST['feedback']);
+C:\xampp\htdocs\project\id\myaddcomment.php
+      6: $userid = $_POST['userid'];
+      7: $timeid = $_POST['timeid'];
+     10: $fname = $_POST['fname'];
+     11: $lname = $_POST['lname'];
+     12: $comment = $_POST['comment'];
+     14: if (empty($_POST['comment'])) {
+C:\xampp\htdocs\project\invite_form.php
+      8: $name = trim($_POST['to']);
+      9: $email = trim($_POST['email']);
+     10: $feedback = trim($_POST['feedback']);
+     11: $user = $_POST['user'];
+C:\xampp\htdocs\project\mailnew2.php
+      5: $to = $_POST['to'];
+      6: $to2 = $_POST['to2'];
+      8: $sub = addslashes($_POST['subject']);
+      9: $msg = addslashes($_POST['mail']);
+     11: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\mailreply2.php
+      5: $to = $_POST['to'];
+      7: $sub = addslashes($_POST['subject']);
+      8: $msg = addslashes($_POST['mail']);
+C:\xampp\htdocs\project\member.php
+      8: $username = $_POST['username'];
+      9: $password = $_POST['password'];
+C:\xampp\htdocs\project\myaddcomment.php
+      6: $userid = $_POST['userid'];
+      7: $timeid = $_POST['timeid'];
+     10: $fname = $_POST['fname'];
+     11: $lname = $_POST['lname'];
+     12: $comment = $_POST['comment'];
+     14: if (empty($_POST['comment'])) {
+C:\xampp\htdocs\project\other_feedback.php
+      6: $name = trim($_POST['name']);
+      7: $email = trim($_POST['email']);
+      8: $feedback = trim($_POST['feedback']);
+      9: $user_pass_phrase = SHA1($_POST['verify']);
+     25: if (!filled_out($_POST) || !valid_email($email)) {
+C:\xampp\htdocs\project\pcadd_book.php
+      5: $type=trim($_POST['type']);
+      6: $letter=trim($_POST['letter']);
+C:\xampp\htdocs\project\pcadd_book2.php
+      4: $type=trim($_POST['type']);
+      5: $letter=trim($_POST['letter']);
+      8: if (isset($_POST)) {
+C:\xampp\htdocs\project\pcadd_new.php
+      5: $fname=trim($_POST['fname']);
+      6: $lname=trim($_POST['lname']);
+      7: $cell=trim($_POST['cell']);
+      8: $city=trim($_POST['city']);
+      9: $usermode=trim($_POST['usermode']);
+     36: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcaddcomment.php
+      6: $userid = $_POST['userid'];
+      7: $timeid = $_POST['timeid'];
+     10: $fname = $_POST['fname'];
+     11: $lname = $_POST['lname'];
+     12: $comment = $_POST['comment'];
+C:\xampp\htdocs\project\pcaddupdate.php
+      6: $update=trim($_POST['update']);
+     42: if (empty($_POST)) {
+     45: if (!filled_out($_POST)) {
+     60: $_POST = "";
+C:\xampp\htdocs\project\pcbregister_new.php
+      6: $fname=trim($_POST['fname']);
+      8: $lname=trim($_POST['lname']);
+     10: $cell=trim($_POST['cell']);
+     11: $city=trim($_POST['city']);
+     13: $email=trim($_POST['email']);
+     14: $username=trim($_POST['username']);
+     15: $passwd=trim($_POST['passwd']);
+     16: $passwd2=trim($_POST['passwd2']);
+     17: $usermode=trim($_POST['usermode']);
+     18: $displaymode=trim($_POST['display']);
+     20: $user_pass_phrase = SHA1($_POST['verify']);
+     44: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcchange_city.php
+      5: $new_city = trim($_POST['new_city']);
+     29: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcchange_display.php
+      5: $old_displaymode = $_POST['old_displaymode'];
+      6: $new_displaymode = trim($_POST['new_displaymode']);
+     27: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcchange_email.php
+      5: $new_email = trim($_POST['new_email']);
+     27: if (!filled_out($_POST) || !valid_email($new_email)) {
+C:\xampp\htdocs\project\pcchange_name.php
+      6: $old_fname = trim($_POST['old_fname']);
+      9: $new_fname = trim($_POST['new_fname']);
+     13: $old_lname = trim($_POST['old_lname']);
+     16: $new_lname = trim($_POST['new_lname']);
+     40: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcchange_number.php
+      5: $new_cell = trim($_POST['new_cell']);
+     30: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcchange_passwd.php
+      5: $old_passwd = trim($_POST['old_passwd']);
+      8: $new_passwd = trim($_POST['new_passwd']);
+     11: $new_passwd2 = trim($_POST['new_passwd2']);
+     34: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcchange_password.php
+      5: $old_passwd = trim($_POST['old_passwd']);
+      6: $new_passwd = trim($_POST['new_passwd']);
+      7: $new_passwd2 = trim($_POST['new_passwd2']);
+     29: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcchange_photo.php
+     28: if (isset($_POST['submit'])) {
+C:\xampp\htdocs\project\pcforgot_passwd.php
+      7: $username = $_POST['username'];
+C:\xampp\htdocs\project\pcfriend.php
+     30: if (isset($_POST['provider_box']))
+     32: if (isset($oi_services['email'][$_POST['provider_box']])) $plugType='email';
+     33: elseif (isset($oi_services['social'][$_POST['provider_box']])) $plugType='social';
+     61: if (!empty($_POST['step'])) $step=$_POST['step'];
+     69: if (empty($_POST['email_box']))
+     71: if (empty($_POST['password_box']))
+     73: if (empty($_POST['provider_box']))
+     77: $inviter->startPlugin($_POST['provider_box']);
+     81: elseif (!$inviter->login($_POST['email_box'],$_POST['password_box']))
+     92: $_POST['oi_session_id']=$inviter->plugin->getSessionID();
+     93: $_POST['message_box']='';
+     99: if (empty($_POST['provider_box'])) $ers['provider']='Provider missing';
+    102: $inviter->startPlugin($_POST['provider_box']);
+    107: if (empty($_POST['email_box'])) $ers['inviter']='Inviter information missing';
+    108: if (empty($_POST['oi_session_id'])) $ers['session_id']='No active session';
+    109: if (empty($_POST['message_box'])) $ers['message_body']='Message missing';
+    110: else $_POST['message_box']=strip_tags($_POST['message_box']);
+    112: $message=array('subject'=>$inviter->settings['message_subject'],'body'=>$inviter->settings['message_body'],'attachment'=>"\n\rAttached message: \n\r".$_POST['message_box']);
+    115: foreach ($_POST as $key=>$val)
+    117: $selected_contacts[$_POST['email_'.$val]]=$_POST['name_'.$val];
+    121: if (is_numeric($temp[1])) $contacts[$val]=$_POST['name_'.$temp[1]];
+    129: $sendMessage=$inviter->sendMessage($_POST['oi_session_id'],$message,$selected_contacts);
+    134: $message_subject=$_POST['email_box'].$message['subject'];
+    136: $headers="From: {$_POST['email_box']}";
+    153: $_POST['email_box']='';
+    154: $_POST['password_box']='';
+    155: $_POST['provider_box']='';
+    175: <tr class='thTableRow'><td align='right'><label for='email_box'>Email&nbsp;&nbsp;</label></td><td><input class='thTextbox' type='text' name='email_box' value='{$_POST['email_box']}'></td></tr>
+    176: <tr class='thTableRow'><td align='right'><label for='password_box'>Password&nbsp;&nbsp;</label></td><td><input class='thTextbox' type='password' name='password_box' value='{$_POST['password_box']}'></td></tr>
+    182: $contents.="<option value='{$provider}'".($_POST['provider_box']==$provider?' selected':'').">{$details['name']}</option>";
+    190: <tr class='thTableRow'><td align='right' valign='top'><label for='message_box'>Message</label></td><td><textarea rows='5' cols='50' name='message_box' class='thTextArea' style='width:300px;'>{$_POST['message_box']}</textarea></td></tr>
+    219: <input type='hidden' name='provider_box' value='{$_POST['provider_box']}'>
+    220: <input type='hidden' name='email_box' value='{$_POST['email_box']}'>
+    221: <input type='hidden' name='oi_session_id' value='{$_POST['oi_session_id']}'>";
+C:\xampp\htdocs\project\pcinvite_form.php
+      7: $name = trim($_POST['to']);
+      8: $email = trim($_POST['email']);
+      9: $feedback = trim($_POST['feedback']);
+     10: $user = $_POST['user'];
+C:\xampp\htdocs\project\pcmailnew2.php
+      5: $to = $_POST['to'];
+      6: $to2 = $_POST['to2'];
+      8: $sub = addslashes($_POST['subject']);
+      9: $msg = addslashes($_POST['mail']);
+C:\xampp\htdocs\project\pcmailreply2.php
+      5: $to = $_POST['to'];
+      7: $sub = addslashes($_POST['subject']);
+      8: $msg = addslashes($_POST['mail']);
+C:\xampp\htdocs\project\pcmember.php
+      8: $username = $_POST['username'];
+      9: $password = $_POST['password'];
+C:\xampp\htdocs\project\pcother_feedback.php
+      6: $name = trim($_POST['name']);
+      7: $email = trim($_POST['email']);
+      8: $feedback = trim($_POST['feedback']);
+     20: $user_pass_phrase = SHA1($_POST['verify']);
+     40: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcregister_new.php
+      6: $fname=trim($_POST['fname']);
+      8: $lname=trim($_POST['lname']);
+     10: $cell=trim($_POST['cell']);
+     11: $city=trim($_POST['city']);
+     13: $email=trim($_POST['email']);
+     14: $username=trim($_POST['username']);
+     15: $passwd=trim($_POST['passwd']);
+     16: $passwd2=trim($_POST['passwd2']);
+     17: $usermode=trim($_POST['usermode']);
+     18: $displaymode=trim($_POST['display']);
+     20: $user_pass_phrase = SHA1($_POST['verify']);
+     40: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\pcsearch_results.php
+     12: $search_firstname = $_POST['firstname'];
+     13: $search_lastname = sql_sanitize($_POST['lastname']);
+     14: $search_city = sql_sanitize($_POST['city']);
+     15: $list_type = trim($_POST['list_type']);
+C:\xampp\htdocs\project\pcuser_feedback.php
+      7: $name = trim($_POST['name']);
+      8: $email = trim($_POST['email']);
+      9: $feedback = trim($_POST['feedback']);
+     21: $user_pass_phrase = SHA1($_POST['verify']);
+C:\xampp\htdocs\project\register_new.php
+      6: $fname=trim($_POST['fname']);
+     10: $lname=trim($_POST['lname']);
+     14: $cell=trim($_POST['cell']);
+     15: $city=trim($_POST['city']);
+     19: $email=trim($_POST['email']);
+     20: $username=trim($_POST['username']);
+     23: $passwd=trim($_POST['passwd']);
+     24: $passwd2=trim($_POST['passwd2']);
+     27: $displaymode=trim($_POST['display']);
+     30: $user_pass_phrase = SHA1($_POST['verify']);
+     40: if (!filled_out($_POST)) {
+C:\xampp\htdocs\project\rpc.php
+      7: if(isset($_POST['queryString'])) {
+      8: $queryString = $_POST['queryString'];
+C:\xampp\htdocs\project\search_results.php
+     13: $search_fname = sql_sanitize($_POST['fname']);
+     14: $search_lname = sql_sanitize($_POST['lname']);
+     15: $search_city = sql_sanitize($_POST['city']);
+     16: $list_type = trim($_POST['list_type']);
+C:\xampp\htdocs\project\user_feedback.php
+      7: $name = trim($_POST['name']);
+      8: $email = trim($_POST['email']);
+      9: $feedback = trim($_POST['feedback']);
+     10: $user_pass_phrase = SHA1($_POST['verify']);
+     26: if (!filled_out($_POST) || !valid_email($email)) {

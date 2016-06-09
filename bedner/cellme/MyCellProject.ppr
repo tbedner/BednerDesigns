@@ -1,0 +1,313 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.LogType=0
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+[Project tree]
+MyCellProject
+	+Website
+		-iphone
+			id\id.php
+			id\idabout.php
+			id\idadd_bnewentry.php
+			id\idadd_book.php
+			id\idadd_entry.php
+			id\idadd_new.php
+			id\idadd_newentry.php
+			id\idaddcomment.php
+			id\idaddmyupdate.php
+			id\idbregister_form.php
+			id\idbsearch.php
+			id\idcommentdelete.php
+			id\idcontact.php
+			id\iddelete_entry.php
+			id\iddelete_entry2.php
+			id\idedit.php
+			id\ideditchange_cell.php
+			id\ideditchange_cell2.php
+			id\ideditchange_city.php
+			id\ideditchange_city2.php
+			id\ideditchange_display.php
+			id\ideditchange_display2.php
+			id\ideditchange_email.php
+			id\ideditchange_email2.php
+			id\ideditchange_name.php
+			id\ideditchange_name2.php
+			id\ideditchange_password.php
+			id\ideditchange_password2.php
+			id\ideditchange_photo.php
+			id\ideditchange_photo2.php
+			id\idemail.php
+			id\idforgot_form.php
+			id\idforgot_passwd.php
+			id\idfriend.php
+			id\idinvite_form.php
+			id\idjoin.php
+			id\idlogout.php
+			id\idmail.php
+			id\idmaildelete.php
+			id\idmailnew.php
+			id\idmailnew2.php
+			id\idmailreply.php
+			id\idmailreply2.php
+			id\idmailsent.php
+			id\idmember.php
+			id\idmyaddcomment.php
+			id\idmycommentdelete.php
+			id\idmyupdate.php
+			id\idmyupdateall.php
+			id\idmyupdatedelete.php
+			id\idother_feedback.php
+			id\idoutput_fns.php
+			id\idregister_form.php
+			id\idregister_new.php
+			id\idrequest.php
+			id\idsearch.php
+			id\idsearch_results.php
+			id\idsentmail.php
+			id\idsentmaildelete.php
+			id\idupdate.php
+			id\idupdateall.php
+			id\iduser_contact.php
+			id\iduser_feedback.php
+			id\New2.php
+			id\css\style.css
+			webkitexample.php
+		+PC
+			pcregister.php
+			pcsearch_results.php
+			pcoutput_fns.php
+			pcmember.php
+			pcedit.php
+			pcabout.php
+			cellme.css
+			pcregister_form.php
+			pcbregister_form.php
+			pccontact.php
+			pcregister_new.php
+			pcupdate.php
+			pcaddupdate.php
+			pcupdateall.php
+			pcregister.php
+			pcsearch.php
+			pcrequest.php
+			pcforgot_form.php
+			pcforgot_passwd.php
+			pcinvite_form.php
+			pcfriend.php
+			pcuser_feedback.php
+			pcuser_contact.php
+			pclogout.php
+			pcadd_entry.php
+			pcother_feedback.php
+			pcadd_book.php
+			pcadd_bnewentry.php
+			pcadd_newentry.php
+			pcadd_new.php
+			pcdelete_entry2.php
+			pcdelete_entry.php
+			pcchange_name.php
+			pcchange_display.php
+			pcadd_book2.php
+			pcchange_passwd.php
+			pcchange_city.php
+			pcchange_photo.php
+			pcchange_email.php
+			pcchange_number.php
+			pcbregister_new.php
+			pcmailnew.php
+			pcsentmail.php
+			pcsentmaildelete.php
+			pcmaildelete.php
+			pcmailsent.php
+			pcmailreply2.php
+			pcmailreply.php
+			pcmail.php
+			rpc.php
+			pcmailnew2.php
+			pcaddcomment.php
+			pcemail.php
+			pccommentdelete.php
+			pcupdatedelete.php
+		+Phone
+			about.php
+			add_bnewentry.php
+			add_book.php
+			add_book2.php
+			add_entry.php
+			add_fns.php
+			add_new.php
+			add_newentry.php
+			addcomment.php
+			addupdate.php
+			base.css
+			bregister_form.php
+			bregister_new.php
+			captcha.php
+			change_city.php
+			change_city_form.php
+			change_display.php
+			change_display_form.php
+			change_email.php
+			change_email_form.php
+			change_name.php
+			change_name_form.php
+			change_number.php
+			change_number_form.php
+			change_passwd.php
+			change_passwd_form.php
+			change_photo.php
+			commentdelete.php
+			confirm.php
+			contact.php
+			data_valid_fns.php
+			delete_entry.php
+			delete_entry2.php
+			edit.php
+			email.php
+			forgot_form.php
+			forgot_passwd.php
+			friend.php
+			invite_form.php
+			logout.php
+			mail.php
+			maildelete.php
+			mailnew.php
+			mailnew2.php
+			mailreply.php
+			mailreply2.php
+			mailsent.php
+			member.php
+			myaddcomment.php
+			mycommentdelete.php
+			mypagepolicy.php
+			mypageterms.php
+			myupdate.php
+			myupdateall.php
+			myupdatedelete.php
+			other_feedback.php
+			output_fns.php
+			photo.php
+			policy.php
+			register.php
+			register_form.php
+			register_new.php
+			request.php
+			search.php
+			search_results.php
+			sentmail.php
+			sentmaildelete.php
+			terms.php
+			test1.php
+			update.php
+			updateall.php
+			upload.php
+			user_auth_fns.php
+			user_contact.php
+			user_feedback.php
+		mycell_fns.php
+		mobile_device_detect.php
+		index.php
+		db_fns2.php
+[Open project files]
+0=id\css\style.css
+1=base.css
+2=pcabout.php
+3=cellme.css
+4=index.php
+5=invite_form.php
+6=pcfriend.php
+7=pcinvite_form.php
+8=id\idinvite_form.php
+9=id\idfriend.php
+10=id\idoutput_fns.php
+11=pcsearch_results.php
+12=id\idmailnew.php
+13=id\idmailnew2.php
+14=pcoutput_fns.php
+15=..\..\..\Users\Todd\Documents\My Dropbox\Simon-Todd\dataimport2v1.php
+16=..\..\..\Users\Todd\Documents\My Dropbox\Simon-Todd\dataimport2v3.php
+17=..\simon\test.php
+18=..\simon\data\dataimport.php
+19=..\..\..\Users\Todd\Documents\My Dropbox\Simon-Todd\exp27.sgml
+20=..\chat\header_frame.inc.php
+21=..\accel\php.ini
+22=mycell_fns.php
+[Selected Project Files]
+Main=
+Selected=index.php
+[id\css\style.css]
+TopLine=604
+Caret=51,619
+[base.css]
+TopLine=23
+Caret=26,48
+[pcabout.php]
+TopLine=39
+Caret=47,60
+[cellme.css]
+TopLine=155
+Caret=36,160
+[index.php]
+TopLine=1
+Caret=42,35
+[invite_form.php]
+TopLine=37
+Caret=1,62
+[pcfriend.php]
+TopLine=225
+Caret=65,254
+[pcinvite_form.php]
+TopLine=45
+Caret=1,77
+[id\idinvite_form.php]
+TopLine=101
+Caret=56,133
+[id\idfriend.php]
+TopLine=232
+Caret=12,264
+[id\idoutput_fns.php]
+TopLine=1
+Caret=77,26
+[pcsearch_results.php]
+TopLine=419
+Caret=1,451
+[id\idmailnew.php]
+TopLine=5
+Caret=1,1
+[id\idmailnew2.php]
+TopLine=61
+Caret=38,62
+[pcoutput_fns.php]
+TopLine=162
+Caret=77,166
+[..\..\..\Users\Todd\Documents\My Dropbox\Simon-Todd\dataimport2v1.php]
+TopLine=89
+Caret=141,110
+[..\..\..\Users\Todd\Documents\My Dropbox\Simon-Todd\dataimport2v3.php]
+TopLine=57
+Caret=126,89
+[..\simon\test.php]
+TopLine=33
+Caret=125,53
+[..\simon\data\dataimport.php]
+TopLine=33
+Caret=56,56
+[..\..\..\Users\Todd\Documents\My Dropbox\Simon-Todd\exp27.sgml]
+TopLine=1402
+Caret=1,1434
+[..\chat\header_frame.inc.php]
+TopLine=27
+Caret=101,43
+[..\accel\php.ini]
+TopLine=1
+Caret=27,10
+[mycell_fns.php]
+TopLine=1
+Caret=1,1
